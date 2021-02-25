@@ -78,3 +78,10 @@ ggplot(HerdSummary, aes(TestYear, AverageMilkProduction)) +
 ggplot(HerdSummary, aes(TestYear, HerdSize)) +
   geom_line(aes(col = HerdId, group = HerdId))+
   geom_point(aes(col = HerdId))
+
+if (!require("linter")) {
+  install.packages("linter", dependencies = TRUE)
+  library(linter)
+}
+
+install.packages("styler")
